@@ -1,0 +1,292 @@
+🔍 Enter your query (or 'exit'): Account lockout policy settings
+
+📊 Retrieved 10 documents
+
+╭──────────────────────────── Result 1 ─────────────────────────────╮
+│ Page 57                                                           │
+│ 1.2 Account Lockout Policy                                        │
+│ This section contains recommendations for account lockout policy. │
+╰───────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── Result 2 ──────────────────────────────────────────╮
+│ Page 58                                                                                      │
+│ 1.2.1 Ensure 'Account lockout duration' is set to '15 or more                                │
+│ minute(s)' (Automated)                                                                       │
+│ Profile Applicability:                                                                       │
+│ •  Level 1 (L1)                                                                              │
+│ Description:                                                                                 │
+│ This policy setting determines the length of time that must pass before a locked account     │
+│ is unlocked and a user can try to log on again. The setting does this by specifying the      │
+│ number of minutes a locked-out account will remain unavailable. If the value for this        │
+│ policy setting is configured to 0, locked out accounts will remain locked out until an       │
+│ administrator manually unlocks them.                                                         │
+│ Although it might seem like a good idea to configure the value for this policy setting to a  │
+│ high value, such a configuration will likely increase the number of calls that the help      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────── Result 3 ────────────────────────────────────────╮
+│ Page 62                                                                                  │
+│ 1.2.3 Ensure 'Allow Administrator account lockout' is set to                             │
+│ 'Enabled' (Manual)                                                                       │
+│ Profile Applicability:                                                                   │
+│ •  Level 1 (L1)                                                                          │
+│ Description:                                                                             │
+│ This policy setting determines whether the built-in Administrator account is subject to  │
+│ the following Account Lockout Policy settings: Account lockout duration, Account         │
+│ lockout threshold, and Reset account lockout counter. By default, this account is        │
+│ excluded from the account lockout controls and will never be locked out with repeated    │
+│ bad password attempts.                                                                   │
+│ The recommended state for this setting is: Enabled.                                      │
+│ Note: This setting applies only to OSes patched as of October 11, 2022 (see MS           │
+│ KB5020282).                                                                              │
+│ Rationale:                                                                               │
+│ Enabling account lockout policies for the built-in Administrator account will reduce the │
+╰──────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────── Result 4 ─────────────────────────────────────────────────────────────────────╮│ (Automated) .............................................................................................................................. 60     ││ 1.2.3 Ensure 'Allow Administrator account lockout' is set to 'Enabled' (Manual) ...................... 62                                         ││ 1.2.4 Ensure 'Reset account lockout counter after' is set to '15 or more minute(s)' (Automated)                                                   ││  ................................................................................................................................................ ││ .. 64                                                                                                                                             ││ 2 Local Policies ................................ ................................ ................................ .....................66       ││ 2.1 Audit Policy                                                                                                                                  ││ .................................................................................................................................... 66           │╰───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯╭───────────────────────────────────────── Result 5 ─────────────────────────────────────────╮
+│ Page 64                                                                                    │
+│ 1.2.4 Ensure 'Reset account lockout counter after' is set to '15 or                        │
+│ more minute(s)' (Automated)                                                                │
+│ Profile Applicability:                                                                     │
+│ •  Level 1 (L1)                                                                            │
+│ Description:                                                                               │
+│ This policy setting determines the length of time before the Account lockout threshold     │
+│ resets to zero. If the Account lockout threshold is defined, this reset time must be less  │
+│ than or equal to the value for the Account lockout duration setting.                       │
+│ The recommended state for this setting is: 15 or more minute(s).                           │
+│ Note: Password Policy settings (section 1.1) and Account Lockout Policy settings           │
+│ (section 1.2) must be applied via the Default Domain Policy GPO in order to be             │
+│ globally in effect on domain user accounts as their default behavior. If these settings    │
+╰────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────── Result 6 ─────────────────────────────╮
+│ 1.1.7 Ensure 'Store passwords using reversible encryption' is     │
+│ set to 'Disabled' (Automated)                                     │
+│                                                                 │
+│ 1.2 Account Lockout Policy                                        │
+│ 1.2.1 Ensure 'Account lockout duration' is set to '15 or more     │
+│ minute(s)' (Automated)                                            │
+│                                                                 │
+│ 1.2.2 Ensure 'Account lockout threshold' is set to '5 or fewer    │
+│ invalid logon attempt(s), but not 0' (Automated)                  │
+│                                                                 │
+│ 1.2.3 Ensure 'Allow Administrator account lockout' is set to      │
+│ 'Enabled' (Manual)                                                │
+│                                                                 │
+│ 1.2.4 Ensure 'Reset account lockout counter after' is set to '15  │
+│ or more minute(s)' (Automated)                                    │
+│                                                                 │
+╰───────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────── Result 7 ─────────────────────────────────────────╮
+│ Page 60                                                                                   │
+│ 1.2.2 Ensure 'Account lockout threshold' is set to '5 or fewer                            │
+│ invalid logon attempt(s), but not 0' (Automated)                                          │
+│ Profile Applicability:                                                                    │
+│ •  Level 1 (L1)                                                                           │
+│ Description:                                                                              │
+│ This policy setting determines the number of failed logon attempts before the account is  │
+│ locked.                                                                                   │
+│ The recommended state for this setting is: 5 or fewer invalid logon attempt(s),           │
+│ but not 0.                                                                                │
+│ Note: A value of 0 does not conform to the benchmark as it disables account lockout       │
+│ threshold.                                                                                │
+│ Note #2: Password Policy settings (section 1.1) and Account Lockout Policy settings       │
+│ (section 1.2) must be applied via the Default Domain Policy GPO in order to be            │
+│ globally in effect on domain user accounts as their default behavior. If these settings   │
+╰───────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────── Result 8 ────────────────────────────────────────────╮
+│ introduces risk of increased accidental lockouts and/or a threat actor intentionally             │
+│ locking out accounts.                                                                            │
+│ Impact:                                                                                          │
+│ If this policy setting is enabled, a locked-out account will not be usable until it is reset by  │
+│ an administrator or until the account lockout duration expires. This setting may generate        │
+│ additional help desk calls.                                                                      │
+│ If you enforce this setting a threat actor could cause a denial-of-service condition by          │
+│ deliberately generating failed logons for multiple users, therefore you should also              │
+│ configure the Account Lockout Duration to a relatively low value.                                │
+│ If the Account Lockout Threshold is set to 0, there is a possibility that a threat actor's       │
+│ attempt to discover passwords with a brute force password attack might go undetected             │
+│ if a robust audit mechanism is not in place.                                                     │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────── Result 9 ───────────────────────────────────────────╮
+│ high value, such a configuration will likely increase the number of calls that the help       │
+│ desk receives to unlock accounts locked by mistake. Users should be aware of the              │
+│ length of time a lock remains in place, so that they realize they only need to call the help  │
+│ desk if they have an extremely urgent need to regain access to their computer.                │
+│ The recommended state for this setting is: 15 or more minute(s).                              │
+│ Note: Password Policy settings (section 1.1) and Account Lockout Policy settings              │
+│ (section 1.2) must be applied via the Default Domain Policy GPO in order to be                │
+│ globally in effect on domain user accounts as their default behavior. If these settings       │
+│ are configured in another GPO, they will only affect local user accounts on the               │
+╰───────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────── Result 10 ─────────────────────────────────────────╮
+│ Enabling account lockout policies for the built-in Administrator account will reduce the   │
+│ likelihood of a successful brute force attack.                                             │
+│ Impact:                                                                                    │
+│ The built-in Administrator account will be subject to the policies in Section 1.2 Account  │
+│ Lockout Policy of this benchmark.                                                          │
+│ Audit:                                                                                     │
+│ Navigate to the UI Path articulated in the Remediation section and confirm it is set as    │
+│ prescribed.                                                                                │
+│ Remediation:                                                                               │
+│ To establish the recommended configuration via GP, set the following UI path to            │
+│ Enabled:                                                                                   │
+│ Computer Configuration\Policies\Windows Settings\Security Settings\Account                 │
+│ Policies\Account Lockout Policies\Allow Administrator account lockout                      │
+│ Default Value:                                                                             │
+│ Disabled. (The built-in Administrator account is not subject to the account lockout        │
+│ policy.)                                                                                   │
+╰────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🔍 Enter your query (or 'exit'): What are password complexity requirements?
+
+📊 Retrieved 10 documents
+
+╭────────────────────────────────────── Result 1 ───────────────────────────────────────╮
+│ Page 50                                                                               │
+│ 1.1.5 Ensure 'Password must meet complexity requirements' is                          │
+│ set to 'Enabled' (Automated)                                                          │
+│ Profile Applicability:                                                                │
+│ •  Level 1 (L1)                                                                       │
+│ Description:                                                                          │
+│ This policy setting checks all new passwords to ensure that they meet basic           │
+│ requirements for strong passwords.                                                    │
+│ When this policy is enabled, passwords must meet the following minimum requirements:  │
+│ • Not contain the user's account name or parts of the user's full name that exceed    │
+│ two consecutive characters                                                            │
+│ • Be at least six characters in length                                                │
+│ • Contain characters from three of the following categories:                          │
+│ o English uppercase characters (A through Z)                                          │
+│ o English lowercase characters (a through z)                                          │
+│ o Base 10 digits (0 through 9)                                                        │
+│ o Non-alphabetic characters (for example, !, $, #, %)                                 │
+╰───────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────────────────────────────── Result 2 ────────────────────────────────────────────────────────────────────╮
+│ Page 3                                                                                                                                          │
+│ 1.1.4 Ensure 'Minimum password length' is set to '14 or more character(s)' (Automated)  ...... 47                                               │
+│ 1.1.5 Ensure 'Password must meet complexity requirements' is set to 'Enabled' (Automated) 50                                                    │
+│ 1.1.6 Ensure 'Relax minimum password length limits' is set to 'Enabled' (Automated) ............ 53                                             │
+│ 1.1.7 Ensure 'Store passwords using reversible encryption' is set to 'Disabled' (Automated)  . 55                                               │
+│ 1.2 Account Lockout Policy ................................................................................................................ 57  │
+│ 1.2.1 Ensure 'Account lockout duration' is set to '15 or more minute(s)' (Automated)  ............. 58                                          │
+│ 1.2.2 Ensure 'Account lockout threshold' is set to '5 or fewer invalid logon attempt(s), but not 0'                                             │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────── Result 3 ───────────────────────────────────────╮
+│ Page 761                                                                              │
+│ 18.9.26.4 Ensure 'Password Settings: Password Complexity' is                          │
+│ set to 'Enabled: Large letters + small letters + numbers + special                    │
+│ characters' or 'Passphrase' (Automated)                                               │
+│ Profile Applicability:                                                                │
+│ •  Level 1 (L1)                                                                       │
+│ Description:                                                                          │
+│ This policy setting configures the Windows LAPS Password Settings policy for          │
+│ password complexity.                                                                  │
+│ The recommended state for this setting is: Enabled: Large letters + small             │
+│ letters + numbers + special characters. Configuring this setting to Passphrase        │
+│ (long words), Passphrase (short words) or Passphrase (short words with                │
+│ unique prefixes) also conforms to the benchmark.                                      │
+│ Note: Passphrase list is generated from Deep Dive: EFF´s New Wordlists for Random     │
+│ Passphrases by Electronic Frontier Foundation and only supports the English language. │
+╰───────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────── Result 4 ──────────────────────────────────────╮
+│ forgotten passwords due to password length requirements, consider teaching your     │
+│ users about passphrases, which are often easier to remember and, due to the larger  │
+│ number of character combinations, much harder to discover.                          │
+╰─────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────── Result 5 ───────────────────────────╮
+│ Page 1369                                                      │
+│ Appendix: Summary Table                                        │
+│ CIS Benchmark Recommendation Set                               │
+│ Correctly                                                      │
+│ Yes No                                                         │
+│ 1 Account Policies                                             │
+│ 1.1 Password Policy                                            │
+│ 1.1.1 Ensure 'Enforce password history' is set to '24 or more  │
+│ password(s)' (Automated)                                       │
+│                                                              │
+│ 1.1.2 Ensure 'Maximum password age' is set to '365 or fewer    │
+│ days, but not 0' (Automated)                                   │
+│                                                              │
+│ 1.1.3 Ensure 'Minimum password age' is set to '1 or more       │
+│ day(s)' (Automated)                                            │
+│                                                              │
+│ 1.1.4 Ensure 'Minimum password length' is set to '14 or more   │
+│ character(s)' (Automated)                                      │
+│                                                              │
+│ 1.1.5 Ensure 'Password must meet complexity requirements'      │
+│ is set to 'Enabled' (Automated)                                │
+│                                                              │
+│ 1.1.6 Ensure 'Relax minimum password length limits' is set to  │
+│ 'Enabled' (Automated)                                          │
+│                                                              │
+│ 1.1.7 Ensure 'Store passwords using reversible encryption' is  │
+│ set to 'Disabled' (Automated)                                  │
+│                                                              │
+╰────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────────── Result 6 ───────────────────────────────────────────╮
+│ Rationale:                                                                                     │
+│ Passwords that contain only alphanumeric characters are extremely easy to discover             │
+│ with several publicly available tools.                                                         │
+│ Impact:                                                                                        │
+│ If the default password complexity configuration is retained, additional help desk calls       │
+│ for locked-out accounts could occur because users might not be accustomed to                   │
+│ passwords that contain non-alphabetic characters. However, all users should be able to         │
+│ comply with the complexity requirement with minimal difficulty.                                │
+│ If your organization has more stringent security requirements, you can create a custom         │
+│ version of the Passfilt.dll file that allows the use of arbitrarily complex password strength  │
+│ rules. For example, a custom password filter might require the use of non-upper row            │
+╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────── Result 7 ────────────────────────────────────────╮
+│ Page 763                                                                                 │
+│ Additional Information:                                                                  │
+│ Each additional character in a password increases its complexity exponentially. For      │
+│ instance, a seven-character, all lower-case alphabetic password would have 26 to the     │
+│ power of 7 (approximately 8 x 10 to the power of 9 or 8 billion) possible combinations.  │
+│ At 1,000,000 attempts per second (a capability of many password-cracking utilities), it  │
+│ would only take 133 minutes to crack. A seven-character alphabetic password with case    │
+│ sensitivity has 52 to the power of 7 combinations. A seven-character case-sensitive      │
+│ alphanumeric password without punctuation has 627 combinations. An eight-character       │
+│ password has 26 to the power of 8 (or 2 x 10 to the power of 11) possible combinations.  │
+╰──────────────────────────────────────────────────────────────────────────────────────────╯
+╭─────────────────────────────────────── Result 8 ────────────────────────────────────────╮
+│ rules. For example, a custom password filter might require the use of non-upper row     │
+│ characters. (Upper row characters are those that require you to hold down the SHIFT     │
+│ key and press any of the digits between 1 and 0.) A custom password filter might also   │
+│ perform a dictionary check to verify that the proposed password does not contain        │
+│ common dictionary words or fragments.                                                   │
+│ Also, the use of ALT key character combinations can greatly enhance the complexity of   │
+│ a password. However, such stringent password requirements can result in unhappy         │
+│ users and an extremely busy help desk. Alternatively, your organization could consider  │
+│ a requirement for all administrator passwords to use ALT characters in the 0128 - 0159  │
+╰─────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────── Result 9 ─────────────────────────────────────╮
+│ Page 52                                                                           │
+│ Remediation:                                                                      │
+│ To establish the recommended configuration via GP, set the following UI path to   │
+│ Enabled:                                                                          │
+│ Computer Configuration\Policies\Windows Settings\Security Settings\Account        │
+│ Policies\Password Policy\Password must meet complexity requirements               │
+│ Default Value:                                                                    │
+│ Enabled on domain members. Disabled on stand-alone workstations.                  │
+│ References:                                                                       │
+│ 1. https://www.cisecurity.org/white-papers/cis-password-policy-guide/             │
+│ 2. https://learn.microsoft.com/en-us/windows/security/threat-protection/security- │
+│ policy-settings/password-policy                                                   │
+│ 3. GRID: MS-00000005                                                              │
+│ CIS Controls:                                                                     │
+│ Controls                                                                          │
+│ Version Control IG 1 IG 2 IG 3                                                    │
+│ v8                                                                                │
+│ 5.2 Use Unique Passwords                                                          │
+│  Use unique passwords for all enterprise assets. Best practice implementation     │
+╰───────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────── Result 10 ─────────────────────────────────────────╮
+│ There are many different theories about how to determine the best password length for      │
+│ an organization, but perhaps "passphrase" is a better term than "password." In Microsoft   │
+│ Windows 2000 or newer, passphrases can be quite long and can include spaces.               │
+│ Therefore, a phrase such as "I want to drink a $5 milkshake" is a valid passphrase; it is  │
+│ a considerably stronger password than an 8- or 10-character string of random numbers       │
+│ and letters and yet is easier to remember. Users must be educated about the proper         │
+│ selection and maintenance of passwords, especially around password length. In              │
+│ enterprise environments, the ideal value for the Minimum password length setting is 14     │
+│ characters, however you should adjust this value to meet your organization's business      │
+│ requirements.                                                                              │
+╰────────────────────────────────────────────────────────────────────────────────────────────╯
+
+🔍 Enter your query (or 'exit'): exit
